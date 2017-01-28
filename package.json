@@ -1,0 +1,30 @@
+{
+  "name": "slack-file-dumper",
+  "version": "0.1.0",
+  "description": "Dump and optionally delete Slack team files",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richchurcher/slack-file-dumper.git"
+  },
+  "keywords": [
+    "slack",
+    "file",
+    "dump",
+    "delete",
+    "storage",
+    "limit"
+  ],
+  "author": "Rich Churcher",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/richchurcher/slack-file-dumper/issues"
+  },
+  "homepage": "https://github.com/richchurcher/slack-file-dumper#readme",
+  "dependencies": {
+    "@slack/client": "^3.8.1"
+  }
+}
