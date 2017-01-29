@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/richchurcher/slack-file-dumper#readme",
   "dependencies": {
-    "@slack/client": "^3.8.1"
+    "@slack/client": "^3.8.1",
+    "dotenv": "^4.0.0"
   }
 }
