@@ -2,8 +2,14 @@
   "name": "slack-file-dumper",
   "version": "0.1.0",
   "description": "Dump and optionally delete Slack team files",
-  "main": "index.js",
+  "main": "bin/sfd.js",
+  "bin": {
+    "sfd": "bin/sfd.js"
+  },
   "scripts": {
+    "bin": "mkdir -p bin;mv lib/sfd.js bin;chmod a+x bin/sfd.js",
+    "build": "npm run transpile;npm run bin",
+    "transpile": "babel src --ignore bin,lib,node_modules,test --out-dir lib",
     "test": "ava"
   },
   "repository": {
@@ -26,6 +32,35 @@
   "homepage": "https://github.com/richchurcher/slack-file-dumper#readme",
   "dependencies": {
     "@slack/client": "^3.8.1",
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "eslint": "^3.14.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "installedESLint": true,
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "standard",
+      "promise"
+    ]
   }
 }
